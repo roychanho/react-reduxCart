@@ -43,7 +43,7 @@ export const sendCartData = (cart) => {
     dispatch(
       uiActions.showNotification({
         status: "pending",
-        title: "Sending",
+        title: "Sending...",
         message: "Sending cart data!",
       })
     );
@@ -54,7 +54,7 @@ export const sendCartData = (cart) => {
         {
           method: "PUT",
           body: JSON.stringify({
-            item: cart.items,
+            items: cart.items,
             totalQuantity: cart.totalQuantity,
           }),
         }
